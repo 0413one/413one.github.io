@@ -9,6 +9,26 @@
 <title>萱窝 (゜-゜)つロ 干杯~-xwan.net.cn</title>
 <style type="text/css">
 /*All*/
+ #container {
+  position: relative;
+  width: 100%;
+  height: 100%;}
+ .petal {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background:#FFA3A3;
+  border-radius: 100%;
+  box-shadow: inset -5px -6px 7px #FFE5E5;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
 a {text-decoration:none}
 a {color:#FFBCB3;}
 a:hover {background:#FFBCB333;}
@@ -47,6 +67,31 @@ color:#ffffff;}
 </head>
 
 <body bgcolor="#232323">
+<div id="container" style="z-index:1;"></div>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+ const container = document.getElementById('container');
+ const numberOfPetals = 15;
+ for (let i = 0; i < numberOfPetals; i++) {
+ createPetal();
+  }
+   function createPetal() {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+    container.appendChild(petal);
+    const size = Math.random() * 10 + 10;
+    petal.style.width = `${size}px`;
+    petal.style.height = `${size}px`;
+    petal.style.left = `${Math.random() * 100}vw`;
+    petal.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    petal.style.animationDelay = `${Math.random() * 5}s`;
+    petal.addEventListener('animationend', () => {
+    petal.remove();
+   createPetal();
+  });
+ }
+});
+</script>
 <a name="hhh"></a>
 <header style="
 position:fixed;
@@ -82,7 +127,7 @@ display:inline-block;
 margin:12px;
 font-weight:bold;
 ">
-<a href="https://xwan.net.cn/" style="color:#ffffff">&nbsp萱辰の小窝&nbsp</a>
+<a href="https://xwan.net.cn/" style="color:#ffffff">&nbspxwan.net.cn&nbsp</a>
 </div>
 </header>
 
@@ -96,7 +141,7 @@ left:0px">
 <div style="
 width:100vw;
 height:720px;
-background-image:url('https://krseoul.imgtbl.com/i/2024/10/26/671ca5fc03f54.jpg');
+background-image:url('https://krseoul.imgtbl.com/i/2024/11/03/6726d62a8e749.jpg');
 background-size:cover;
 background-repeat:no-repeat;">
 <text style="
@@ -107,7 +152,7 @@ left:10px;
 color:#FFFFFF;
 height:auto;
 ">
-<span style="font-size:48px;">
+<span style="font-size:40px;">
 <table border="0" cellspacing="0" width="44" height="44">
 <tr>
 <td></td> 
@@ -173,26 +218,29 @@ height:auto;
 <td></td>  
 </tr>    
 </table>    
-你好~<br>
-我是@林萱辰<br>
+Hello,I'm<br>
+@Xwancheng Lin<br>
 </span>
 <table border="0" cellspacing="10">
 <tr>
-<td bgcolor="#ffb3b3" width="33" height="33" align="center"><a href="https://b23.tv/0m8Nnrw"><font color="white"><b>B站</b></font></a></td>
-<td bgcolor="#ffb3b3" width="33" height="33" align="center"><a href="http://www.coolapk.com/u/22713467"><font color="white"><b>酷安</b></font></a></td>
+<td></td>    
+</tr>
+<tr>
+<td bgcolor="#ffb3b3" width="33" height="33" align="center"><a href="https://b23.tv/0m8Nnrw"><font color="white"><b>Bili</b></font></a></td>
 <td bgcolor="#ffb3b3" width="33" height="33" align="center"><a href="https://github.com/0413one"><font color="white"><b>Git</b></font></a></td>
 <td bgcolor="#ffb3b3" width="33" height="33" align="center"><a href="https://www.instagram.com/xwancheng413?igsh=NGVhN2U2NjQ0Yg=="><font color="white"><b>Ins</b></font></a></td>
 <td bgcolor="#ffb3b3" width="33" height="33" align="center"><a href="https://x.com/Xwancheng?s=09"><font color="white"><b>X</b></font></a></td>
+<td bgcolor="#ffb3b3" width="33" height="33" align="center"><a href="mailto: onejialin@xwan.net.cn"><font color="white"><b>Mail</b></font></a></td>
 </tr>
 <tr>
-<td bgcolor="#FFE7E7" height="33" align="center" colspan="2"><a href="https://afdian.com/a/onejialin"><font color="#FF9191"><b>✨赞赏我</b></font></a></td>
+<td bgcolor="#FFE7E7" height="33" align="center" colspan="4"><a href="ad.html"><font color="#FF9191"><b>💰&nbspApplaud&nbsp赞赏</b></font></a></td>
 </tr>
 </table>
 </text>
 </div>
 <br>
 
-<span style="font-size:28px;color:#ffffff;">&nbsp•作品</span>
+<span style="font-size:28px;color:#ffffff;">&nbsp•Works</span>
 <br>
 <br>
 <me style="color:#cccccc;">
@@ -204,13 +252,17 @@ height:auto;
 <tab>&nbsp💬社区交流&nbsp</tab>&nbsp<tab>&nbsp留言板&nbsp</tab>
 <br><hb>yominsky</hb>
 <br>最可爱的留言板之一，但我们希望你也能够被关注着
-<br><a href="https://y.xwan.net.cn/"><u>访问web端</u></a>
+<br><a href="https://y.xwan.net.cn/"><u>•访问Web端</u></a>
 </td></tr>
 </table>
 </me>
-
 <br>
 
+<span style="font-size:28px;color:#ffffff;">&nbsp•MeowShop</span>
+<br>
+Null
+<br>
+<br>
 <footer>
 <div style="
 position:absolute;
@@ -221,18 +273,18 @@ left:0px;
 <table border="0" align="left" cellspacing="30">
 <tr valign="top">
 <td>
-<span class="title">支持</span> 
+<span class="title">Support</span> 
 <br>   
 <a class="footer" href="https://github.com/onejialin0413/onejialin.github.io/issues/1">Issues</a>
 <br> 
-<a class="footer" href="https://github.com/0413one/413one.github.io">项目地址</a>
+<a class="footer" href="https://github.com/0413one/413one.github.io">Project 项目</a>
 <br>   
-<a class="footer" href="https://afdian.com/a/onejialin">赞赏我</a>
+<a class="footer" href="ad.html">Applaud 赞赏</a>
 <br>   
 <a class="footer" href="https://qm.qq.com/q/sZyjtRT4xW">友链申请</a>
 <br>   
 <br>    
-<span class="title">统计</span> 
+<span class="title">Data</span> 
 <br>  
 <a class="footer" href="https://mrank.chinaz.com/all/xwan.net.cn/">权重综合查询</a>
 <br>      
@@ -241,7 +293,7 @@ left:0px;
 <a class="footer" href="https://mseo.chinaz.com/?host=xwan.net.cn">SEO查询</a>
 <br>      
 <br>    
-<span class="title">条款</span> 
+<span class="title">Terms</span> 
 <br>  
 <a class="footer" href="https://bgm.tv/blog/345062">魔法少女用户协议</a>
 <br>
@@ -253,14 +305,14 @@ left:0px;
 
 </td>
 <td>
-<span class="title">社区</span> 
+<span class="title">Community</span> 
 <br>
 <a class="footer" href="https://meowIsland.github.io/">yominsky留言板</a>
 <br> 
 <a class="footer" href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=p2w0UV0Flg4eO3s6SNS1tc9piCJXUWgQ&authKey=zxnz1sxd%2B6T33M%2FFAnN8jTC2IkMIBZr4ZpgzKRZ8vEobVCr9sXBXwylwhZSn1c1p&noverify=0&group_code=922243453">QQ群组</a>
 <br>
 <br>   
-<span class="title">地图</span> 
+<span class="title">Maps</span> 
 <br>
 <a class="footer" href="https://xwan.net.cn/">萱辰的小窝</a>
 <br>  
@@ -269,7 +321,7 @@ left:0px;
 <a class="footer" href="https://y.music.163.com/m/playlist?id=8208355527&userid=8427267479&creatorId=8427267479">Island推歌台</a>
 <br>   
 <br>   
-<span class="title">友链</span> 
+<span class="title">Friends</span> 
 <br>
 <a class="footer" href="https://hp.sakuras.in/">空白の主页</a>
 <br>
@@ -283,9 +335,9 @@ left:0px;
 <tr>
 <td colspan="2">
 <font size="2" color="#868686">
-E-mail：onejialin@xwan.net.cn
+E-mail : onejialin@xwan.net.cn
 <br>
-Copyright &copy 2022 林萱辰 All rights reserved.
+Copyright &copy 2022 XwanchengLin All rights reserved.
 </font>  
 <br>
 <br>
