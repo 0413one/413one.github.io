@@ -8,6 +8,26 @@
 <meta name="description" content="Nice to meet you"/>
 <title>萱窝 (゜-゜)つロ 干杯~-xwan.net.cn</title>
 <style>
+    body {
+            position: relative;
+        }
+
+        body::before {
+            content: "xwan.net.cn"; /* 这里填写你想要的水印文字内容 */
+            color: gray; /* 水印文字颜色，可按需修改 */
+            font-size: 30px; /* 文字大小，根据实际调整合适尺寸 */
+            opacity: 0.2; /* 透明度设置，数值越小越淡，可自行设定 */
+            position: fixed; /* 固定定位，使其在页面固定位置显示 */
+            top: 0; /* 距离页面顶部的距离，这里从顶部开始 */
+            left: 0; /* 距离页面左侧距离，从左侧开始 */
+            pointer-events: none; /* 鼠标事件穿透，不影响页面正常交互 */
+            width: 100%; /* 占满页面宽度 */
+            height: 100%; /* 占满页面高度 */
+            display: flex; /* 使用flex布局来进行后续的水平垂直居中操作 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            text-align: center; /* 文字水平方向居中 */
+        }
 div.title {font-size:23px;
            font-weight:bold;
            color:#FFFFFF;
