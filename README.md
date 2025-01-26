@@ -1,1 +1,1 @@
-# 浏览 [琳琳的小窝 🏳️‍⚧️ Xwan.net.cn](https://xwan.net.cn/) (ฅ>w<*ฅ)
+# 浏览 [琳琳的小窝 🏳️‍⚧️ Karina.xwan.net.cn](https://karina.xwan.net.cn/) (ฅ>w<*ฅ)
